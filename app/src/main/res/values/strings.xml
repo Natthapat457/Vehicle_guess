@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Vehicle_guess</string>
+    <string name="textview">TextView</string>
+    <string name="todo">TODO</string>
+    <string name="vehicle_guess">Vehicle Guess</string>
+    <string name="play">Play</string>
+</resources>
