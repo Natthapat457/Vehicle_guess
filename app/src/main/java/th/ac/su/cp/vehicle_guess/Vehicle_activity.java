@@ -31,16 +31,17 @@ public class Vehicle_activity extends AppCompatActivity {
 class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     //WordItem item,item2;
     Vehicle_item[] items={
-            new Vehicle_item(R.drawable.bic,"1.Bicycle"),
-            new Vehicle_item(R.drawable.bus,"2.Bus"),
-            new Vehicle_item(R.drawable.car,"3.Car"),
-            new Vehicle_item(R.drawable.firet,"4.Fire-Truck"),
-            new Vehicle_item(R.drawable.motor,"5.Motorcycle"),
-            new Vehicle_item(R.drawable.palne,"6.Plane"),
-            new Vehicle_item(R.drawable.ship,"7.Ship"),
-            new Vehicle_item(R.drawable.traib,"8.Train"),
-            new Vehicle_item(R.drawable.truck,"9.Truck"),
-            new Vehicle_item(R.drawable.heli,"10.Helicopter")
+            new Vehicle_item(R.drawable.bic,"1.Bicycle",9),
+            new Vehicle_item(R.drawable.bus,"2.Bus",10000),
+            new Vehicle_item(R.drawable.car,"3.Car",1600),
+            new Vehicle_item(R.drawable.firet,"4.Fire-Truck",28000),
+            new Vehicle_item(R.drawable.motor,"5.Motorcycle",100),
+            new Vehicle_item(R.drawable.palne,"6.Plane",50000),
+            new Vehicle_item(R.drawable.ship,"7.Ship",50000),
+            new Vehicle_item(R.drawable.traib,"8.Train",3500000),
+            new Vehicle_item(R.drawable.truck,"9.Truck",3000),
+            new Vehicle_item(R.drawable.heli,"10.Helicopter",5000 ),
+
     };
 
     public MyAdapter(){
@@ -61,7 +62,8 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.imageview.setImageResource(items[position].imageResId);
-        holder.textview.setText(items[position].vehicle_name);}
+        holder.textview.setText(items[position].vehicle_name);
+        holder.textview2.setText(items[position].weight);}
     @Override
     public int getItemCount() {
         return items.length;
@@ -71,12 +73,14 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
         ImageView imageview;
         TextView textview;
+        TextView textview2;
 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             imageview = itemView.findViewById(R.id.imageViewpos);
             textview = itemView.findViewById(R.id.textViewpos);
+            textview2 = itemView.findViewById(R.id.textViewpos2);
         }
     }
 

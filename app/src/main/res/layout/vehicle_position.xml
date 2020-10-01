@@ -12,20 +12,38 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/traib"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/traib" />
 
     <TextView
         android:id="@+id/textViewpos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:text="@string/textview"
-        android:textColor="#9C27B0"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewpos"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewpos2"
         app:layout_constraintStart_toEndOf="@+id/imageViewpos"
-        app:layout_constraintTop_toTopOf="@+id/imageViewpos" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textViewpos2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/textview"
+        android:textColor="#7F7E80"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewpos"
+        app:layout_constraintTop_toBottomOf="@+id/textViewpos" />
 </androidx.constraintlayout.widget.ConstraintLayout>
